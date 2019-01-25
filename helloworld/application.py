@@ -3,8 +3,8 @@ import json
 from flask import request
 from flask import Flask, Response
 from helloworld.flaskrun import flaskrun
-#from postal.expand import expand_address
-#from postal.parser import parse_address
+from postal.expand import expand_address
+from postal.parser import parse_address
 
 application = Flask(__name__)
 
