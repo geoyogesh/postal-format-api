@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     commands:
-      - yum install curl autoconf automake libtool python-devel pkgconfig git -y
+      - yum install rpm-build curl autoconf automake libtool python-devel pkgconfig git -y
       - curr_working_dir=`pwd`
       - mkdir temp
       - git clone https://github.com/openvenues/libpostal
