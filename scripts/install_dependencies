@@ -1,4 +1,15 @@
 #!/bin/bash
+yum install rpm-build curl autoconf automake libtool python-devel pkgconfig git -y
+curr_working_dir=`pwd`
+mkdir temp
+git clone https://github.com/openvenues/libpostal
+cd libpostal
+./bootstrap.sh
+./configure --datadir=$curr_working_dir/temp
+make
+make install
+sudo ldconfigsudo
+cd $curr_working_dir
 easy_install pip
 pip install virtualenv
 cd /home/ec2-user/python-flask-service
