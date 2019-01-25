@@ -1,7 +1,7 @@
 version: 0.2
 
 phases:
-install:
+  install:
     commands:
       - yum install curl autoconf automake libtool python-devel pkgconfig git -y
       - curr_working_dir=`pwd`
