@@ -14,7 +14,7 @@ def get_hello_world():
 def get_expand():
     # here we want to get the value of user (i.e. ?user=some-value)
     user_input = request.args.get('q')
-    if (user_input):
+    if not user_input:
         return Response(json.dumps({'Output': 'please provide input query parameter q to complete expand request'}), mimetype='application/json', status=200)
     else:
         from postal.expand import expand_address
@@ -24,7 +24,7 @@ def get_expand():
 def get_parser():
     # here we want to get the value of user (i.e. ?user=some-value)
     user_input = request.args.get('q')
-    if (user_input):
+    if not user_input:
         return Response(json.dumps({'Output': 'please provide input query parameter q to comple parser request'}), mimetype='application/json', status=200)
     else:
         from postal.parser import parse_address
